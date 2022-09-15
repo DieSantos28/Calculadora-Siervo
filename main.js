@@ -54,3 +54,64 @@ do{
         respuesta = prompt("Desea realizar otra operación?").toLowerCase()
     }while (respuesta != "si" && respuesta != "no")
 }while(respuesta != "no")
+
+
+
+const BicicletaDeEjemplo = {
+    fabricante : "specialized",
+    modelo : "rockhopper",
+    año : "Este es un breve ejemplo de como sera una vez habilitado el servicio de nuestro seguro"   
+};
+
+console.log(typeof BicicletaDeEjemplo);
+console.log(BicicletaDeEjemplo);
+
+
+
+
+function Bicicleta(fabricante, modelo, fecha) {
+    this.fabricante = fabricante;
+    this.modelo = modelo;
+    this.fecha = fecha;
+
+}
+
+let fabricante = prompt("Ingrese el nombre del fabricante de su bicicleta(Giant,Trek,Winner,Bmx,Specialized).");
+let modelo = prompt("Ingrese el modelo de su bicicleta.(no todos los modelos se tomarán en cuenta");
+let fecha = parseInt(prompt("Ingrese el año en el cual su bicicleta se lanzó al mercado.(Solo estaran disponibles los ultimos 5 años)"));
+
+const bike = new Bicicleta (fabricante, modelo, fecha);
+console.log(bike);
+
+let array = [
+    {fabricante: "Winner" , modelo: "Aloy", año: 2018},
+    {fabricante: "Giant", modelo: "Trance 29", año: 2019},
+    {fabricante: "Trek" , modelo: "Marlin 5", año: 2020},
+    {fabricante: "Bmx" , modelo: "Squeeze", año: 2021},
+    {fabricante: "Specialized" , modelo: "Rockhopper", año: 2022},
+    
+]
+
+console.log("El seguro se podrá adquirir para los modelos que fueron lanzados al mercado hasta 5 años atrás(contando con 2022 inclusive):");
+
+const margenAño = array.map(function(lista){
+    return lista.año;
+})
+
+console.log(margenAño)
+
+console.log("Estos son ejemplos de algunos de los modelos más populares:");
+
+const ejemploModelo = array.map(function(lista){
+    return lista.modelo;
+})
+
+console.log(ejemploModelo)
+
+console.log("Este es el listado de fabricantes con los que tenemos el gusto de trabajar en conjunto");
+
+const marcasTratadas = array.map(function(lista){
+    return lista.fabricante;
+})
+
+console.log(marcasTratadas)
