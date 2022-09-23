@@ -115,3 +115,50 @@ const marcasTratadas = array.map(function(lista){
 })
 
 console.log(marcasTratadas)
+
+
+const tituloEncabezado = document.getElementById("tituloEncabezado");
+const tutorial = document.getElementById("tutorial");
+const datos = document.getElementById("datos");
+
+tituloEncabezado.innerText = "Actualizacion! Nuestra pagina se encuentra (aún) momentaneamente, fuera de servicio, pero cada vez falta menos...";
+datos.className = "info";
+
+const arrayContactos = ["Gaston Fernandez - gastonfernandezbike@hotmail.com", "Diego Santos - diegosantosandresbike@hotmail.com", "Sebastian Siervo - sebasiervobike@hotmail.com"];
+const listaContactos = document.getElementById("listaContactos");
+
+class paquete {
+    constructor(nombre, precio){
+        this.nombre = nombre;
+        this.precio = precio;
+    }
+}
+
+const pabasico = new paquete("Regular", 50 );
+const pamedium = new paquete("Medium", 100);
+const pacompleto = new paquete("Complete", 200);
+
+const arrayPaquetes  = [pabasico, pamedium, pacompleto];
+
+const contenedorPaquetes = document.getElementById("contenedorPaquetes");
+
+arrayPaquetes.forEach( paquete => {
+        let div = document.createElement("div");
+        div.innerHTML = `<p>${paquete.nombre}</p>
+                         <p>Precio: $${paquete.precio}</p>
+                         <button class= "btnSoli"> Solicitar Ahora </button>`;
+    contenedorPaquetes.appendChild(div);
+} )
+
+
+for(let contacto of arrayContactos) {
+    let itemLista = document.createElement("li");
+    itemLista.innerText = contacto;
+    listaContactos.appendChild(itemLista);
+}
+
+const caja = document.getElementById("caja");
+
+caja.onmouseout = () => {
+    console.log("Juego terminado!");
+}
