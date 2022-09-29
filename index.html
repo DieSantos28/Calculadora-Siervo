@@ -4,52 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Calculá tu pre$upue$to</title>
+    <title>Nutrivita</title>
 </head>
 <body>
-<h1 id="tituloEncabezado">Nuestra pagina se encuentra momentaneamente, fuera de servicio...</h1>
-<p>Pero tranquilo! mientras trabajamos para lograr un servicio de calidad, le recomendamos hacer uso de nuestra calculadora, con el objetivo de que tenga un panorama de los "números" con los que cuenta, y a su vez tambien podrá ir ingresando la informacion requerida de su bicicleta para nuestro proximo servicio de seguros!.
-<hr>
-<h2>Modo de uso</h2>
-<div id="tutorial" class="pasos">
-<p><li>1)- Digite el primer numero de su operación.</li>
-   <li>2)- Luego digite el signo que desea para su operación( + , - , x , /)</li>
-   <li>3)- Por ultimo digite el segundo número para concluir dicha operación.</li>
-   <li>4)- Por medio de la "consola" podrá saber su resultado final.</li>
-</div>                    
-</p>
-<div id="datos">
-    <p>Si lo que usted desea realizar, es el ingreso de los datos de tu bicicleta, usted deberá;
-        <li>1)- (Luego de operar con nuestra calculadora y aclarar que no desea continuar operando en la misma)Ingrese el nombre del fabricante de su bici.</li>
-       <li>2)- A continuación ingrese el modelo de su bicicleta.</li>
-       <li>3)- Por ultimo ingrese el año en el cual su bicicleta se lanzó al mercado.</li>
-       <li>4)- Para finalizar, porr medio de la "consola" podrá visualizar el resultado de los datos ingresados, desplegando el item "Bicicleta".</li>
-    </p>
-</div>
-<hr>
-<div>
-    <p class="listado">Lista de los proximos paquetes con los que contaremos
-    ("Pueden haber variables con respecto al producto final, contando con la base de que estamos en etapa de desarrollo");</p>
-</div>
+    <nav>
+        <ul>
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#"><img class="w-25" src="./assets/img/logo.jpg" alt=""></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./pages/consejos.html">Consejos</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./pages/orientacion.html">Modelo</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </ul>
+    </nav>
+<header>
+    <h1> >Nutrivita< </h1>
+</header>
 
-<div id="contenedorPaquetes">
+<main>
+    <p class="bienvenido">Bienvenid@ a Nutrivita! una web diseñada para fomentar una calidad de vida saludable</p>
+</main>
 
-</div>
-<br><br>
-<h3>MINI JUEGO "curioso" !;</h3>
-<div>
-    <p>Pon a prueba tu capacidad visual, e intenta delinear el cuadro sin salirte. Podrás saber que el "juego termina" por medio de la consola.</p>
-</div>
-<li><strong>Intentalo!</strong></li>
-    <div id="caja" class="juego"></div>
-<br>                    
 <aside>
-    <p class="intentos">Cuantos intentos te ha tomado lograrlo?...</p>
-    <hr>
-</aside>
+    <p class="intro">El peso corporal es la suma de todo lo que nuestro organismo contiene. Es decir, engloba nuestra masa muscular, la grasa, los líquidos y fluidos, los huesos y lo que pesan nuestros órganos.
+    Mantener un peso saludable es muy importante. Si usted está demasiado delgado o tiene sobrepeso u obesidad, puede tener más riesgos de sufrir ciertos problemas de salud.
+    Alcanzar un peso saludable puede ayudarlo a controlar el colesterol, la presión arterial y el azúcar en la sangre.
+    Una vez hecha esta introduccion, le invitamos a calcular su indice de masa corporal, El resultado, lo clasificará en una de las cuatro categorías principales, pretende describir su cuerpo en una o dos palabras: bajo peso (IMC inferior a 18,5), peso normal (de 18,5 a 24,9), sobrepeso (de 25,0 a 29,9) u obesidad (30 o más).
+    </p>
 
-    <ul id="listaContactos">Por consultas, esta es la lista de contactos referidos;</ul>
+<div class="formu">
+  <form class="col-xl-6 col-md-10" id="formulario">
+    <label for="nombre" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="nombre" placeholder = "Ingrese su nombre">
+    <label for="email" class="form-label">Correo Electrónico</label>
+    <input type="email" class="form-control" id="email" required placeholder = "Ingrese su mail@">
+    <label for="altura" class="form-label">Altura</label>
+    <input type="number" class="form-control" id="altura" placeholder = "Ingrese su altura">
+    <label for="peso" class="form-label">Peso</label>
+    <input type="number" class="form-control" id="peso" placeholder = "Ingrese su peso">
+    <button type="submit" class="btn colorBoton my-5">Calcular</button>
+</form>
+</div>
+
+<div class="row">
+  <div class="col-12 text-center" id="infoUsuarios"></div>
+</div>
+<button class="btn btn-lg px-4 gap-3 colorBoton m-3" id="admin"> Historial</button>
+<div class="row">
+  <div id="datosAdmin"></div>
+</div>
+
+</aside>             
+
 <script src="main.js"></script>
+<footer id="pie">©2022 Mayinka, todos los derechos reservados.</footer>
 </body>
 </html>
+

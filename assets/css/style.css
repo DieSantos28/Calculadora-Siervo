@@ -1,58 +1,58 @@
-h1{
-    text-align: center;
-    color: rgb(69, 55, 55);
-    
-}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
-p{
-    color: rgb(104, 10, 138);
-    text-align:start
-    font-style: italic;
+h1{
+    color: rgb(132, 91, 91);
+    text-align: center;
+    font-family: Dancing Script;
 }
 
 h2{
+    font-style: italic;
+    padding: 5px;
+}
+
+.intro{
+    background-color: rgba(255, 229, 84, 0.622);
+    color: rgb(132, 91, 91);
+    font-style: italic;
+    margin: 10px;
     text-align: center;
-    color: rgb(69, 55, 55);
-    text-decoration: underline;
-    font-weight: 100;
+    border-style: double;
+}
+
+.consejos{
+    color: rgb(255, 229, 84, 0.622);
+    text-align: center;
+    font-style: italic;
+    padding: 10px;
+    background-color:rgb(132, 91, 91) ;
+}
+
+.bienvenido{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: rgb(69, 72, 70);
+    background-image: url(../img/fondoformulario.jpg);
+}
+
+#pie{
+    text-align: center;
+    margin: 50px;
+    padding: 50px;
+    font-size: small;
+    text-decoration: solid;
+}
+
+.btn{
+    padding: 2px;
+    margin: 2px;
+    background-color:rgb(236, 174, 17);
+    border-style: double;
     
 }
 
-.pasos{
-    font-style: italic;
-}
-
-.info{
-    color: rgb(108, 6, 37);
-    text-align: left;
-}
-
-
-.listado{
-    color: rgb(56, 38, 63);
-    text-align:center;
-    font-style: italic;
-    text-decoration:underline;
-    font-size: large;
-}
-
-.btnSoli{
-    background-color: rgb(224, 205, 130);
-    color:rgb(42, 25, 49);
-}
-
-h3{
-    text-align: center;
-}
-.juego{
-    padding: 10px;
-    margin: 10px;
-    width: 15px;
-    height: 15px;
-    border: solid 3px black;
-}
-
-.intentos{
-    color: rgb(42, 25, 49);
-    text-decoration: solid;
+.formu{
+    padding: 5px;
+    margin: 5px;
+    background-image: url(../img/fondoformulario.jpg);
 }

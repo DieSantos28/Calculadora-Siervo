@@ -1,164 +1,73 @@
 function Bienvenido(){
-    alert("Bienvenido! listo para sacar los cálculos de tu seguro?");
+    alert("Accediendo a Nutrivita, cargando una mejor calidad de vida...100%");
 }
 
 Bienvenido();
 
-const suma = (num1, num2) => num1 + num2;
-const resta = (num1, num2) => num1 - num2;
-const división = (num1, num2) => num1 / num2;
-const multiplicación = (num1, num2) => num1 * num2;
 
-function mostrarValores ( operacion, num1, num2) {
-    switch(operacion) {
-        
-        case "+":
-            console.log( suma(num1,num2));
-        break;
+class Persona {
+    constructor(nombre, email, peso, altura) {
+        this.nombre = nombre; 
+        this.email = email;
+        this.peso = peso;
+        this.altura = altura; 
+    }
 
-        case "-":
-            console.log( resta(num1,num2));
-        break;
-
-        case "/":
-            console.log( división(num1,num2));
-        break;
-
-        case "*":
-            console.log( multiplicación(num1,num2));
-        break;
-
-        default:
-          console.log("operación no valida")  
+    calcularIMC() {
+        let resultado = (this.peso / (this.altura * this.altura)) * 10000;
+        return resultado.toFixed(2);
     }
 }
 
-let respuesta;
-do{
-    let num1, operacion, num2 
-    do{
-        num1=parseFloat(prompt("Ingrese el primer número deseado para la operación"))
-        operacion=prompt("Ingrese una operación (+,-,*,/)")
-        num2=parseFloat(prompt("Ingrese el segundo número deseado para la operación"))
+const personas = [];
 
+const idFormulario = document.getElementById("formulario");
 
-        if(isNaN (num1)  || isNaN (num2)){
-            console.log("Número no válido...");
-        }
-        if(num2 === 0 && operacion =="/"){
-            console.log("No puedes dividir entre 0")
-        }
-    }while((isNaN(num1) || isNaN (num2)||(num2 === 0 && operacion == "/")))
-    mostrarValores(operacion, num1, num2)
-    do{
-        respuesta = prompt("Desea realizar otra operación?").toLowerCase()
-    }while (respuesta != "si" && respuesta != "no")
-}while(respuesta != "no")
+idFormulario.addEventListener("submit", (e) => {
+    e.preventDefault();
+     
 
-
-
-const BicicletaDeEjemplo = {
-    fabricante : "specialized",
-    modelo : "rockhopper",
-    año : "Este es un breve ejemplo de como sera una vez habilitado el servicio de nuestro seguro"   
-};
-
-console.log(typeof BicicletaDeEjemplo);
-console.log(BicicletaDeEjemplo);
-
-
-
-
-function Bicicleta(fabricante, modelo, fecha) {
-    this.fabricante = fabricante;
-    this.modelo = modelo;
-    this.fecha = fecha;
-
-}
-
-let fabricante = prompt("Ingrese el nombre del fabricante de su bicicleta(Giant,Trek,Winner,Bmx,Specialized).");
-let modelo = prompt("Ingrese el modelo de su bicicleta.(no todos los modelos se tomarán en cuenta");
-let fecha = parseInt(prompt("Ingrese el año en el cual su bicicleta se lanzó al mercado.(Solo estaran disponibles los ultimos 5 años)"));
-
-const bike = new Bicicleta (fabricante, modelo, fecha);
-console.log(bike);
-
-let array = [
-    {fabricante: "Winner" , modelo: "Aloy", año: 2018},
-    {fabricante: "Giant", modelo: "Trance 29", año: 2019},
-    {fabricante: "Trek" , modelo: "Marlin 5", año: 2020},
-    {fabricante: "Bmx" , modelo: "Squeeze", año: 2021},
-    {fabricante: "Specialized" , modelo: "Rockhopper", año: 2022},
+    const nombre = document.getElementById("nombre").value;
+    const email = document.getElementById("email").value;
+    const peso = document.getElementById("peso").value;
+    const altura = document.getElementById("altura").value;
     
-]
+    const persona = new Persona(nombre, email, peso, altura);
+    
+    personas.push(persona);
 
-console.log("El seguro se podrá adquirir para los modelos que fueron lanzados al mercado hasta 5 años atrás(contando con 2022 inclusive):");
+    
+    localStorage.setItem("Persona", JSON.stringify(personas));
 
-const margenAño = array.map(function(lista){
-    return lista.año;
+    
+    idFormulario.reset();
+
+    mostrarInfo(persona);
+
 })
 
-console.log(margenAño)
 
-console.log("Estos son ejemplos de algunos de los modelos más populares:");
+const resultado = document.getElementById("infoUsuarios");
 
-const ejemploModelo = array.map(function(lista){
-    return lista.modelo;
+const mostrarInfo = (persona) => {
+    let aux ="";
+    aux += `<p class="resultado"> ${persona.nombre} tu Masa Corporal es de: </p>
+            <p class="resultado"> IMC: ${persona.calcularIMC()} </p>`
+    resultado.innerHTML = aux;
+}
+
+const botonAdmin = document.getElementById("admin");
+const datosAdmin = document.getElementById("datosAdmin");
+
+botonAdmin.addEventListener("click", () => {
+    const personas = JSON.parse(localStorage.getItem("Persona"));
+    let aux = "";
+    personas.forEach(persona => {
+        aux += `<hr><p class="resultado"> Nombre: ${persona.nombre} </p> 
+                <p class="resultado"> Altura: ${persona.altura} </p>
+                <p class="resultado"> Peso: ${persona.peso} </p> <hr>`
+                
+    });
+    datosAdmin.innerHTML = aux; 
 })
 
-console.log(ejemploModelo)
-
-console.log("Este es el listado de fabricantes con los que tenemos el gusto de trabajar en conjunto");
-
-const marcasTratadas = array.map(function(lista){
-    return lista.fabricante;
-})
-
-console.log(marcasTratadas)
-
-
-const tituloEncabezado = document.getElementById("tituloEncabezado");
-const tutorial = document.getElementById("tutorial");
-const datos = document.getElementById("datos");
-
-tituloEncabezado.innerText = "Actualizacion! Nuestra pagina se encuentra (aún) momentaneamente, fuera de servicio, pero cada vez falta menos...";
-datos.className = "info";
-
-const arrayContactos = ["Gaston Fernandez - gastonfernandezbike@hotmail.com", "Diego Santos - diegosantosandresbike@hotmail.com", "Sebastian Siervo - sebasiervobike@hotmail.com"];
-const listaContactos = document.getElementById("listaContactos");
-
-class paquete {
-    constructor(nombre, precio){
-        this.nombre = nombre;
-        this.precio = precio;
-    }
-}
-
-const pabasico = new paquete("Regular", 50 );
-const pamedium = new paquete("Medium", 100);
-const pacompleto = new paquete("Complete", 200);
-
-const arrayPaquetes  = [pabasico, pamedium, pacompleto];
-
-const contenedorPaquetes = document.getElementById("contenedorPaquetes");
-
-arrayPaquetes.forEach( paquete => {
-        let div = document.createElement("div");
-        div.innerHTML = `<p>${paquete.nombre}</p>
-                         <p>Precio: $${paquete.precio}</p>
-                         <button class= "btnSoli"> Solicitar Ahora </button>`;
-    contenedorPaquetes.appendChild(div);
-} )
-
-
-for(let contacto of arrayContactos) {
-    let itemLista = document.createElement("li");
-    itemLista.innerText = contacto;
-    listaContactos.appendChild(itemLista);
-}
-
-const caja = document.getElementById("caja");
-
-caja.onmouseout = () => {
-    console.log("Juego terminado!");
-}
