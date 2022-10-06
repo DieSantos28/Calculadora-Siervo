@@ -71,3 +71,59 @@ botonAdmin.addEventListener("click", () => {
     datosAdmin.innerHTML = aux; 
 })
 
+const bajobtn = document.getElementById("bajobtn");
+
+bajobtn.addEventListener("click", () => {
+     Swal.fire({
+        title:"Bajo Peso",
+        text: "Aunque estar delgado a menudo puede ser saludable, tener bajo peso puede ser una preocupación si es el resultado de una mala nutrición o si estás embarazada o tienes otros problemas de salud. Por lo tanto, si tienes bajo peso, consulta a tu médico o dietista para hacerte una evaluación. Juntos, pueden planificar cómo llegar a tu peso ideal. Deberías de comer con más frecuencia, prueba eligir alimentos ricos en nutrientes, licuados y batidos de frutas. (Obtén mas consejos en nuestra sección).",
+        icon: "warning",
+        imageUrl:"https://help.trainingym.com/hs-fs/hubfs/Knowledge%20Base%20Import/downloads.intercomcdn.comio224063001581486c867dbb5303fcbc5deimage.png?width=453&name=downloads.intercomcdn.comio224063001581486c867dbb5303fcbc5deimage.png",
+        background: "#84E3E0",
+        backdrop: "#4C9896",
+        confirmButtonText: "Continuar",
+    })
+})
+
+const pesobtn = document.getElementById("pesobtn");
+
+pesobtn.addEventListener("click", () => {
+    Swal.fire({
+        title:"Peso Normal",
+        text: "Al parecer tienes un peso adecuado y seguro que una buena calidad de vida, aún así te recomendamos que sigas manteniendo un control de tu alimentación.",
+        icon: "success",
+        imageUrl:"https://help.trainingym.com/hs-fs/hubfs/Knowledge%20Base%20Import/downloads.intercomcdn.comio224063001581486c867dbb5303fcbc5deimage.png?width=453&name=downloads.intercomcdn.comio224063001581486c867dbb5303fcbc5deimage.png",
+        background: "#44B056",
+        backdrop: "#25602F",
+        confirmButtonText: "Continuar",  
+    })
+})
+
+const sobrebtn = document.getElementById("sobrebtn");
+
+sobrebtn.addEventListener("click", () => {
+    Swal.fire({
+        title:"Sobrepeso",
+        text: "El sobrepeso es un exceso de peso corporal más alto de lo que se considera saludable para una persona en relación con su edad, estatura y sexo, definido por un índice de masa corporal igual o superior a 25. Recomendamos; Consultar a un especialista para obtener un tratamiento adecuado, realizar actividad física regular y mantener una dieta balanceada y nutritiva. Más de 1.900 millones de adultos (en el año 2016, según la Organización Mundial de la Salud) sufren de sobrepeso.",
+        icon: "warning",
+        imageUrl:"https://help.trainingym.com/hs-fs/hubfs/Knowledge%20Base%20Import/downloads.intercomcdn.comio224063001581486c867dbb5303fcbc5deimage.png?width=453&name=downloads.intercomcdn.comio224063001581486c867dbb5303fcbc5deimage.png",
+        background: "#FAC2A6",
+        backdrop: "#B08773",
+        confirmButtonText: "Continuar",
+    })
+})
+
+const obebtn = document.getElementById("obebtn");
+
+obebtn.addEventListener("click", () => {
+    Swal.fire({
+        title:"Obesidad",
+        text: "La obesidad se relaciona de forma clara y directa con un gran número de patologías. Es causa de enfermedades cardiovasculares (hipertensión, diabetes, infarto de miocardio, ictus…) y, además, puede intervenir en el desarrollo de otras como el cáncer, la apnea del sueño, la infertilidad, artrosis o el hígado graso. Si bien existen varios tipos de obesidad, ya sea alimentaria o hereditaria entre otras, las recomendaciones que podemos ofrecerles son; Consultar a un especialista para obtener un tratamiento adecuado, realizar actividad física regular, mantener una dieta balanceada y nutritiva, unirse a grupos de apoyo, en casos severos, el médico puede prescribir el uso de medicamentos o una intervención quirúrgica. Alrededor de 650 millones de adultos (en el año 2016, según la Organización Mundial de la Salud) sufren de Obesidad.",
+        icon: "error",
+        imageUrl:"https://help.trainingym.com/hs-fs/hubfs/Knowledge%20Base%20Import/downloads.intercomcdn.comio224063001581486c867dbb5303fcbc5deimage.png?width=453&name=downloads.intercomcdn.comio224063001581486c867dbb5303fcbc5deimage.png",
+        background: "#FF945E",
+        backdrop: "#FFA07A",
+        confirmButtonText: "Continuar",
+
+    })
+})

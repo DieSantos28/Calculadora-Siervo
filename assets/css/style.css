@@ -56,3 +56,23 @@ h2{
     margin: 5px;
     background-image: url(../img/fondoformulario.jpg);
 }
+
+#admin{
+    padding: 2px;
+    margin: 2px;
+    background-color:rgb(189, 132, 239);
+    border-style: double;
+    font-family:'Times New Roman', Times, serif
+}
+
+.cnsjresultado{
+    color: rgb(132, 91, 91);
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-family: Dancing Script;
+}
+
+.botones{
+    text-align: center;
+}

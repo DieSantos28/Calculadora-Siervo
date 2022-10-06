@@ -39,7 +39,7 @@
 </header>
 
 <main>
-    <p class="bienvenido">Bienvenid@ a Nutrivita! una web diseñada para fomentar una calidad de vida saludable</p>
+    <p class="bienvenido">Bienvenid@ a Nutrivita! una web diseñada para fomentar una calidad de vida saludable.</p>
 </main>
 
 <aside>
@@ -59,7 +59,7 @@
     <input type="number" class="form-control" id="altura" placeholder = "Ingrese su altura">
     <label for="peso" class="form-label">Peso</label>
     <input type="number" class="form-control" id="peso" placeholder = "Ingrese su peso">
-    <button type="submit" class="btn colorBoton my-5">Calcular</button>
+    <button type="submit" class="btn btn-info colorBoton my-5" id="calculobtn">Calcular</button>
 </form>
 </div>
 
@@ -70,9 +70,23 @@
 <div class="row">
   <div id="datosAdmin"></div>
 </div>
+<hr>
+<div class="cnsjresultado">
+<h3>Info según tu resultado...</h3>
+</div>
 
-</aside>             
+<div class="botones">
+<button class="btn btn-danger px-4 gap-1 m-3" id="bajobtn">Bajo Peso</button>
+<button class="btn btn-success px-4 gap-1 m-3" id="pesobtn">Peso Normal</button>
+<button class="btn btn-danger px-4 gap-1 m-3" id="sobrebtn">Sobrepeso</button>
+<button class="btn btn-danger px-4 gap-1 m-3" id="obebtn">Obesidad</button>
+</div>
 
+</aside> 
+          
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>  
 <script src="main.js"></script>
 <footer id="pie">©2022 Mayinka, todos los derechos reservados.</footer>
 </body>
