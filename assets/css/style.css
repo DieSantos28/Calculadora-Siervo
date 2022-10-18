@@ -76,3 +76,10 @@ h2{
 .botones{
     text-align: center;
 }
+
+h4{
+    text-align: start;
+    color: rgb(132, 91, 91);
+    font-family: Dancing Script;
+    font-size: 30px;
+}

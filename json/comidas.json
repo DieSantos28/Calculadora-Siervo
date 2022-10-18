@@ -1,0 +1,9 @@
+[
+ {"nombre": "Lunes", "comidas": "Tortilla de papa, y ensalada de tomates."},
+ {"nombre": "Martes", "comidas": "Rollitos de calabacin, y plato de guisantes."},
+ {"nombre": "Miercoles", "comidas": "Risotto de arroz y setas."},
+ {"nombre": "Jueves", "comidas": "Carne roja al horno con espinacas."},
+ {"nombre": "Viernes", "comidas": "Croquetas de papa acompañadas de esparragos."},
+ {"nombre": "Sabado", "comidas": "Wok de zanahoria y remolacha."},
+ {"nombre": "Domingo", "comidas": "Lasagna de vegetales y compota de manzana."}
+]

@@ -127,3 +127,20 @@ obebtn.addEventListener("click", () => {
 
     })
 })
+
+
+const listado = document.getElementById("listado");
+
+const listadoComidas = "json/comidas.json";
+
+fetch(listadoComidas)
+    .then(respuesta => respuesta.json())
+    .then(datos => {
+        datos.forEach( producto => {
+            listado.innerHTML += `<h3>Día: ${producto.nombre}</h3>
+                                <strong>Comida Principal; ${producto.comidas}</strong>`
+        })
+    })
+    .catch(error => console.log(error))
+    .finally(() => console.log("Proceso Terminado"))
+
