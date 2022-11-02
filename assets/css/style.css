@@ -9,6 +9,8 @@ h1{
 h2{
     font-style: italic;
     padding: 5px;
+    color: rgb(132, 91, 91);
+    font-family: Dancing Script;
 }
 
 .intro{
@@ -83,3 +85,4 @@ h4{
     font-family: Dancing Script;
     font-size: 30px;
 }
+
