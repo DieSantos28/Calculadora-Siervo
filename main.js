@@ -1,9 +1,3 @@
-function Bienvenido(){
-    alert("Accediendo a Nutrivita, cargando una mejor calidad de vida...100%");
-}
-
-Bienvenido();
-
 
 class Persona {
     constructor(nombre, email, peso, altura) {
